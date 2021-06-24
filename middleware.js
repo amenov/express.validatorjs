@@ -1,12 +1,12 @@
 const Validator = require('amenov.validator')
 
 module.exports = (options) => (req, res, next) => {
-  req.validation = async (rules, target = 'body') => {
-    const validation = new Validator(req[target], rules, options)
+  req.validator = async (rules) => {
+    const validator = new Validator(req.body, rules, options)
 
-    await validation.fails()
+    await validator.fails()
 
-    return validation.failed ? validation.errors : null
+    return validator.failed ? validator.errors : null
   }
 
   next()
