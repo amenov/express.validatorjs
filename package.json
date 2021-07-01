@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/amenov/express.validatorjs#readme",
   "dependencies": {
-    "amenov.validator": "^2.1.6"
+    "amenov.validator": "^2.2.0"
   }
 }
